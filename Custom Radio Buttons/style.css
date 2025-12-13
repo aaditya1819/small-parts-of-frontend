@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0px;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+
+    display: grid;
+    height: 100%;
+    width: 100%;
+    place-items: center;
+    background: #0069d9;
+}
+
+.wrapper{
+    height: 100px;
+    width: 400px;
+    background: #fff;
+    border-radius: 5px;
+    display: flex;
+    padding: 20px 12px;
+
+    align-items: center;
+ 
+    justify-content: space-evenly;
+
+
+    
+}
+
+.wrapper .option{
+    background: #fff;
+    height: 100%;
+    width: 100%;
+    margin: 0 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 2px solid lightgray;
+     display: flex;
+    
+
+    align-items: center;
+    border: 1px solid #0069d9;
+    justify-content: space-evenly;
+
+
+}
+#option-2:checked ~ .option-2 ,
+#option-1:checked ~ .option-1 {
+    border-color: #0069d9;
+    background: #0069d9;
+
+}
+.wrapper .option .dot{
+    height: 20px;
+    width: 20px;
+    background: #d9d9d9;
+    border-radius: 50%;
+    position: relative;
+    transition: all 0.3s ease;
+
+
+
+}
+#option-2:checked ~ .option-2 .dot,
+#option-1:checked ~ .option-1 .dot{
+    background: #fff;
+
+}
+.wrapper .option .dot::before{
+    position: absolute;
+    content: "";
+    height: 12px;
+    width: 12px;
+    left: 4px;
+    top: 4px;
+    border-radius: 50%;
+    background: #0069d9;
+    opacity: 0;
+    transform: scale(1.5);
+     transition: all 0.3s ease;
+
+}
+#option-2:checked ~ .option-2 .dot::before,
+#option-1:checked ~ .option-1 .dot::before{
+    opacity: 1;
+    transform: scale(1);
+
+}
+.wrapper .option span{
+    color: #808080;
+    font-size: 20px;
+
+}
+#option-2:checked ~ .option-2 span,
+#option-1:checked ~ .option-1 span{
+    color: #fff;
+
+}
+.wrapper input[type="radio"]{
+    display: none;
+}
