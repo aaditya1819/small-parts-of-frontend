@@ -3,45 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Login & Registration Form in HTML & CSS </title>
+    <title>Responsive Login & Registration Form</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="container">
-        <input type="checkbox" id="check">
-        <div class="login form">
-            <header>Login</header>
-            <form action="#">
-                <input type="text" placeholder="Enter your email">
-                <input type="text" placeholder="Enter your password">
-                <a href="#">Forgot password</a>
-                <input type="button" class="button" value="Login">
-            </form>
-            <div class="signup">
-                <span class="signup">Don't have a account</span>
-                <label for="check" class="label">Sign up</label>
-            </div>
-        </div>
-        <div class="registration form">
-            <header>Sign Up</header>
-            <form action="#">
-                <input type="text" placeholder="Enter your name">
-                <input type="text" placeholder="Enter your email">
-                <input type="text" placeholder="Create your password">
-                
-                <input type="button" class="button" value="SignUp">
-            </form>
-            <div class="signup">
-                <span class="signup">Already  have an account</span>
-                <label for="check" class="label">Login</label>
-            </div>
-        </div>
+<div class="container">
+    <input type="checkbox" id="check">
 
+    <!-- LOGIN -->
+    <div class="login form">
+        <header>Login</header>
+        <form action="#">
+            <input type="text" placeholder="Enter your email" required>
+            <input type="password" id="loginPassword" placeholder="Enter your password" required>
+            <a href="#">Forgot password</a>
+            <input type="button" class="button" value="Login" onclick="validateLogin()">
+        </form>
+        <div class="signup">
+            <span>Don't have an account?</span>
+            <label for="check">Sign up</label>
+        </div>
     </div>
-    
 
+    <!-- SIGN UP -->
+    <div class="registration form">
+        <header>Sign Up</header>
+        <form action="#">
+            <input type="text" placeholder="Enter your name" required>
+            <input type="text" placeholder="Enter your email" required>
+            <input type="password" id="signupPassword" placeholder="Create your password">
+            <input type="button" class="button" value="SignUp" onclick="validateSignup()">
+        </form>
+        <div class="signup">
+            <span>Already have an account?</span>
+            <label for="check">Login</label>
+        </div>
+    </div>
+</div>
 
+<script>
+function validateSignup() {
+    const password = document.getElementById("signupPassword").value;
+
+    const passwordRegex =
+        /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&]).{12,}$/;
+
+    if (!passwordRegex.test(password)) {
+        alert(
+            "Password must be at least 12 characters long and include:\n" +
+            "- 1 uppercase letter\n" +
+            "- 1 lowercase letter\n" +
+            "- 1 number\n" +
+            "- 1 special character"
+        );
+        return false;
+    }
+
+    alert("Signup successful!");
+}
+
+function validateLogin() {
+    const password = document.getElementById("loginPassword").value;
+
+    if (password.length < 12) {
+        alert("Password must be at least 12 characters long");
+        return false;
+    }
+
+    alert("Login successful!");
+}
+</script>
 
 </body>
 </html>
