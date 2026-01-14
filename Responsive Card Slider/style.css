@@ -13,6 +13,29 @@ body{
     justify-content: center;
     background: #e3f2f2fd;
 }
+::-webkit-scrollbar{
+    height: 8px;
+
+}
+::-webkit-scrollbar-track{
+    background: #f1f1f1;
+    border-radius: 25px;
+    
+    
+}
+::-webkit-scrollbar-thumb{
+    background: #6e93f7;
+    border-radius: 25px;
+    
+    
+}
+::-webkit-scrollbar-thumb:hover{
+    background: #4070f4
+    
+    
+}
+
+
 .container{
     display: flex;
     gap: 12px;
