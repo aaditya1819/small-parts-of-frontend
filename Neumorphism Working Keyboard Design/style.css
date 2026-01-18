@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #dde1e7;
+    flex-direction: column;
+}
+
+.container {
+    width: 60%;
+
+}
+
+.container .wrapper {
+    min-width: 750px;
+    max-width: 1000px;
+    background: #dde1e7;
+    box-shadow: -3px -3px 7px rgba(255, 255, 255, 0.4), 3px 3px 7px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 25px;
+}
+
+.wrapper .keys {
+    display: flex;
+    justify-content: center;
+
+}
+
+.wrapper .keys input {
+    height: 50px;
+    min-width: 50px;
+    padding: 10px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: grey;
+    text-transform: uppercase;
+    margin: 10px;
+    background: #dde1e7;
+    box-shadow: -3px -3px 7px rgba(255, 255, 255, 0.4), 3px 3px 7px rgba(0, 0, 0, 0.2);
+
+}
+
+.wrapper .keys input:focus {
+    color: #3498db;
+    width: 19px;
+    background: #dde1e7;
+    box-shadow: inset -3px -3px 7px rgba(255, 255, 255, 0.4), inset 3px 3px 7px rgba(0, 0, 0, 0.2);
+
+}
+
+.wrapper .keys input[value="space"] {
+    width: 60%;
+
+}
