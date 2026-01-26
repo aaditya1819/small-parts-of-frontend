@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+}
+
+
+html,
+body {
+    display: grid;
+    height: 100%;
+    place-items: center;
+    text-align: center;
+    background: #dde1e7;
+
+}
+
+.container {
+    background: #dde1e7;
+    padding: 25px;
+    border-radius: 3px;
+    box-shadow: -3px -3px 7px rgba(255, 255, 255, 0.4), 3px 3px 7px rgba(0, 0, 0, 0.2);
+
+
+}
+
+.container .pagination {
+    display: flex;
+
+    list-style: none;
+
+}
+
+.container .pagination li {
+    flex: 1;
+    margin: 0 5px;
+    background: #dde1e7;
+    box-shadow: -3px -3px 7px rgba(255, 255, 255, 0.4), 3px 3px 7px rgba(0, 0, 0, 0.2);
+
+
+}
+
+.pagination li a {
+    font-size: 18px;
+    text-decoration: none;
+    color: #4d3252;
+    height: 45px;
+    width: 55px;
+    display: block;
+    line-height: 45px;
+
+
+
+}
+
+.pagination li.active {
+    box-shadow: inset -3px -3px 7px rgba(255, 255, 255, 0.4), inset 3px 3px 7px rgba(0, 0, 0, 0.2);
+
+}
+
+.pagination li.active a {
+    font-size: 19px;
+    color: #6f6f6f;
+}
+
+.pagination li:first-child a {
+    width: 120px;
+
+
+}
+
+.pagination li:last-child a {
+    width: 100px;
+
+
+}
+
+.pagination li:first-child {
+    margin: 0 15px 0 0;
+
+
+}
+
+.pagination li:last-child {
+    margin: 0 0 0 15px;
+
+
+}
