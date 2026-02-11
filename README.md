@@ -65,7 +65,7 @@ Complete layouts and landing page sections.
 
 ### 🎮 Others & Experiments
 - **Fun**: [Game in HTML/CSS](./Game%20in%20html%20css)
-- **UI Bits**: [Share Button Tooltip](./Share%20Button%20Tooltip), [Custom Tabs](./tab)
+- **UI Bits**: [Share Button Tooltip](./Share%20Button%20Tooltip), [Custom Tabs](./tab), [Emoji Star Rating Widget](./Pure%20CSS%20Emoji%20Star%20Rating%20Widget), [Tabs with Slide Indicator](./Pure%20CSS%20Tabs%20with%20Slide%20Indicator)
 
 ---
 

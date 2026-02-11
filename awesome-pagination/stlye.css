@@ -72,6 +72,8 @@ body {
 
 .pagination li a:focus,
 .pagination li a:active {
+  padding-top: 4px;
+  border-left-width: 1px;
   outline: none;
 }
 
